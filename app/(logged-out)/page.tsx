@@ -1,13 +1,16 @@
 import { Button } from "@/components/ui/button";
-import React from "react";
+import { PersonStandingIcon } from "lucide-react";
 
 const LandingPage = () => {
   return (
-    <div>
-      <h1>Support Me</h1>
+    <>
+      <h1 className="flex gap-2 items-center">
+        <PersonStandingIcon size={50} />
+        Support Me
+      </h1>
       <Button>Log In</Button>
       <Button>Sign In</Button>
-    </div>
+    </>
   );
 };
 
