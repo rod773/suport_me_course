@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { PersonStandingIcon } from "lucide-react";
+import Link from "next/dist/client/link";
 
 const LandingPage = () => {
   return (
@@ -8,8 +9,16 @@ const LandingPage = () => {
         <PersonStandingIcon size={50} className="text-pink-500" />
         Support Me
       </h1>
-      <Button>Log In</Button>
-      <Button>Sign In</Button>
+      <p>The best dashboard to manage customer support</p>
+      <div className="flex gap-2 items-center">
+        <Button asChild variant="outline">
+          <Link href="/login">Log In</Link>
+        </Button>
+        <span>or</span>
+        <Button variant="outline">
+          <Link href="/sign-in">Sign In</Link>
+        </Button>
+      </div>
     </>
   );
 };
